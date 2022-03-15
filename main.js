@@ -1,4 +1,4 @@
-import express from "express";
+import express, { application } from "express";
 import exempleController from "./controllers/exempleController.js";
 
 const app = express();
@@ -14,6 +14,7 @@ app.get("/3", exempleController.renderExempleCondition);
 app.get("/4", exempleController.renderExempleBoucle);
 app.get("/5", exempleController.renderExempleFormulaire);
 app.get("/6", exempleController.renderExempleAsync);
+app.get("/7", exempleController.renderExempleStockage);
 
 app.listen(port, () => {
   console.log("L'app roule sur le port " + port);

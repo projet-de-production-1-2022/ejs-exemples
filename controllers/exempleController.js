@@ -37,8 +37,16 @@ const renderExempleAsync = async (req, res) => {
   const lastName = req.query.lastName;
 
   const response = await apiController.fetchData(firstName, lastName);
+  console.log(req.app.locals);
 
-  res.render("exempleAsync.ejs", { response });
+  res.render("exempleAsync.ejs", { response, apiKey: req.app.locals.apiKey });
+};
+
+const renderExempleStockage = async (req, res) => {
+  const response = await apiController.fetchApiKey();
+  res.app.locals.apiKey = response.access_token;
+
+  res.render("exempleStockage.ejs", { apiKey: res.app.locals.apiKey });
 };
 
 export default {
@@ -49,4 +57,5 @@ export default {
   renderExempleBoucle,
   renderExempleFormulaire,
   renderExempleAsync,
+  renderExempleStockage,
 };

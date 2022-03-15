@@ -4,6 +4,9 @@
   "main": "main.js",
   "license": "MIT",
   "type": "module",
+  "scripts":{
+    "start": "nodemon main.js"
+  },
   "dependencies": {
     "axios": "^0.26.1",
     "ejs": "^3.1.6",

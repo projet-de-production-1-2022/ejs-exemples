@@ -1,0 +1,13 @@
+{
+  "name": "templating",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
